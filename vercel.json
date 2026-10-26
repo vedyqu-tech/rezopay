@@ -1,4 +1,3 @@
-
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "functions": {
@@ -11,22 +10,7 @@
   "outputDirectory": "public",
   "routes": [
     {
-      "src": "^/$",
-      "dest": "/api/index.php"
-    },
-    {
-      "src": "^/index\\.php$",
-      "dest": "/api/index.php"
-    },
-    {
-      "src": "^/\\.htaccess$",
-      "dest": "/api/index.php"
-    },
-    {
-      "handle": "filesystem"
-    },
-    {
-      "src": "^(.*)$",
+      "src": "/(.*)",
       "dest": "/api/index.php"
     }
   ]
